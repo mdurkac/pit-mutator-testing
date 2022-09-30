@@ -20,10 +20,10 @@
                 <version>1.0.0-SNAPSHOT</version>
                 <configuration>
                     <targetClasses>
-                        <param>cz.muni.fi.SecureRandomWrapper</param>
+                        <param>cz.muni.fi.Main</param>
                     </targetClasses>
                     <targetTests>
-                        <param>cz.muni.fi.SecureRandomWrapperTest</param>
+                        <param>cz.muni.fi.MainTest</param>
                     </targetTests>
                 </configuration>
             </plugin>
