@@ -7,6 +7,13 @@
     <groupId>cz.muni.fi</groupId>
     <artifactId>PIT-mutator-testing</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>sandbox</module>
+        <module>always-enabled-user-details</module>
+        <module>use-md5-for-encryption-digest-utils</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
