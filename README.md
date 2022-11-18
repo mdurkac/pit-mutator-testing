@@ -2,6 +2,6 @@
 
 ## Usage
 
-- build `https://github.com/hcoles/pitest` locally
+- build `https://github.com/mdurkac/pitest/tree/develop` locally
 - change directory to specific module
 - run `mvn test-compile org.pitest:pitest-maven:mutationCoverage`
