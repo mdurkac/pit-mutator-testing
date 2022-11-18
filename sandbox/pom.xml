@@ -33,7 +33,7 @@
                         <param>cz.muni.fi.SandboxTest</param>
                     </targetTests>
                     <mutators>
-                        <mutator>EXPERIMENTAL_WEAK_DIGEST</mutator>
+                        <mutator>PATTERN_MATCHES_ANYTHING_MUTATOR</mutator>
                     </mutators>
                 </configuration>
             </plugin>
@@ -52,7 +52,7 @@
         <dependency>
             <groupId>org.pitest</groupId>
             <artifactId>pitest-maven</artifactId>
-            <version>1.9.5</version>
+            <version>1.0.0-SNAPSHOT</version>
             <type>maven-plugin</type>
         </dependency>
 
