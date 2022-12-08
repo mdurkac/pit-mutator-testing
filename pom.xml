@@ -13,6 +13,8 @@
         <module>sandbox</module>
         <module>always-enabled-user-details</module>
         <module>use-md5-for-encryption-digest-utils</module>
+        <module>auth-token-is-always-authenticated</module>
+        <module>password-encoder</module>
     </modules>
 
     <properties>
