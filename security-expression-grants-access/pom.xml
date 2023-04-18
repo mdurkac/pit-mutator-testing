@@ -8,8 +8,8 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>password-encoder</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <artifactId>security-expression-grants-access</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -30,11 +30,11 @@
                     </targetClasses>
                     <targetTests>
                         <!-- Path to test package or file -->
-                        <param>cz.muni.fi.*</param>
+                        <param>cz.muni.fi.SecurityExpressionMutatorKilledTest</param>
                     </targetTests>
                     <!-- Specific mutators can be selected here, otherwise all mutators are used -->
                     <mutators>
-                        <mutator>NOOP_PASSWORD_ENCODER</mutator>
+                        <mutator>SECURITY_EXPRESSION_TRUE_MUTATOR</mutator>
                     </mutators>
                     <!-- Logging -->
                     <verbose>false</verbose>
@@ -72,6 +72,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
             <version>2.7.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>5.7.4</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

@@ -8,15 +8,14 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>password-encoder</artifactId>
-    <version>1.0-SNAPSHOT</version>
+
+    <artifactId>use-md5-for-encryption-bouncy-castle</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
     <build>
         <plugins>
             <plugin>
@@ -30,11 +29,11 @@
                     </targetClasses>
                     <targetTests>
                         <!-- Path to test package or file -->
-                        <param>cz.muni.fi.*</param>
+                        <param>cz.muni.fi.PKCS5S2ParametersGeneratorMutantKilledTest</param>
                     </targetTests>
                     <!-- Specific mutators can be selected here, otherwise all mutators are used -->
                     <mutators>
-                        <mutator>NOOP_PASSWORD_ENCODER</mutator>
+                        <mutator>USE_MD5_FOR_ENCRYPTION_WITH_BOUNCY_CASTLE</mutator>
                     </mutators>
                     <!-- Logging -->
                     <verbose>false</verbose>
@@ -44,7 +43,6 @@
     </build>
 
     <dependencies>
-
         <!-- PIT supported testng version -->
         <dependency>
             <groupId>org.testng</groupId>
@@ -68,11 +66,14 @@
             <version>1.0.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-            <version>2.7.5</version>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>1.70</version>
         </dependency>
+
     </dependencies>
+
 
 </project>
