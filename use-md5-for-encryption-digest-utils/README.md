@@ -1,30 +1,15 @@
-### Module for testing USE_WEAK_MESSAGE_DIGEST (UWMD) mutator
+# Demonstration of `USE_MD5_FOR_ENCRYPTION_DIGEST_UTILS_MUTATOR` mutator
 
-#### Description
+## Use weak digest mutator
 
-Use weak message digest (UWMD). Context: message
-digests, or hashing functions, are very often used to assure the
-integrity of received data. However, some hash functions are
-weak because of their high collision degree: in this case, for a
-hashed string, a malicious user can easily craft another string
-producing the same hash. Goal: the UWMD operator introduces
-a vulnerability in integrity checking of received data by using
-a weak hash function (i.e., MD5). Implementation: it identifies
-hash function calls and replaces them by MD5 hashing.
+Goal: `USE_MD5_FOR_ENCRYPTION_DIGEST_UTILS_MUTATOR` changes secure hash function for weaker hash function, such as MD5, which can be deemed insecure nowadays.
 
-#### TODO:
-- [ ] implementation
-- [ ] tests
+Implementation: mutator intercepts function call to the methods of`DigestUtils` class. For each intercepted method call, `md5` method is used regardless of the return type of method argument (`String`, `InputStream` or array of `byte`).
 
-#### Source (BibTex):
+## Content
 
-```
-@inproceedings{loise2017towards,
-title={Towards security-aware mutation testing},
-author={Loise, Thomas and Devroey, Xavier and Perrouin, Gilles and Papadakis, Mike and Heymans, Patrick},
-booktitle={2017 IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW)},
-pages={97--102},
-year={2017},
-organization={IEEE}
-}
-```
+Project contains an example of a test that on its own kills the mutator and a test that on its own does not kill the mutator.
+
+## Source
+
+1) DURKÁČ, Martin. Security-aware Mutation Testing, 2023.
