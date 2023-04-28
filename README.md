@@ -1,6 +1,6 @@
 # Project for running PIT mutation testing with different mutators
 
-Project for demonstrating mutators from the thesis. Mutator `PERMIT_ALL_ON_AUTHENTICATED_MUTATOR` is missing, because having whole Spring project working with integration tests is necessary. Mutator `USE_WEAK_PSEUDO_RANDOM_NUMBER_GENERATOR_MUTATOR` is also missing, because testing if random number was generated from `java.util.Random` or `java.security.SecureRandom` is not trivial.
+Project for demonstrating mutators from the thesis. Mutator `SQL_INJECTION_OK_WITH_JDBC` is missing, because it requires not trivial database application to run integration tests on. Mutator `USE_WEAK_PSEUDO_RANDOM_NUMBER_GENERATOR_MUTATOR` is also missing, because testing if random number was generated from `java.util.Random` or `java.security.SecureRandom` is not trivial.
 
 ## Usage
 

@@ -32,6 +32,7 @@
         <module>ecb-for-symmetric-encryption</module>
         <module>use-md5-for-encryption-message-digest</module>
         <module>use-md5-for-encryption-bouncy-castle</module>
+        <module>authenticated-to-permit-all</module>
     </modules>
 
     <properties>
