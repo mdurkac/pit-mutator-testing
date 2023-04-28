@@ -16,8 +16,7 @@ public class AuthenticationMutatorSurvivedTest {
      */
     @Test
     public void test_mutantSurvived() {
-        Authentication authentication = new CustomAuthToken();
-        Boolean result = AuthenticationWrapper.isAuthenticated(authentication);
-        Assert.assertNotNull(result);
+        Authentication authentication = new CustomAuthToken(true);
+        Assert.assertTrue(AuthenticationWrapper.isAuthenticated(authentication));
     }
 }

@@ -7,8 +7,9 @@ import java.util.Collections;
 
 public class CustomAuthToken extends AbstractAuthenticationToken implements Authentication {
 
-    public CustomAuthToken() {
+    public CustomAuthToken(boolean authenticated) {
         super(Collections.emptyList());
+        super.setAuthenticated(authenticated);
     }
 
     @Override

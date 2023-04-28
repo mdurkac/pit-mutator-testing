@@ -16,8 +16,7 @@ public class AuthenticationMutatorKilledTest {
      */
     @Test
     public void test_mutantKilled() {
-        Authentication authentication = new CustomAuthToken();
-        // CustomAuthToken::isAuthenticated is always false
+        Authentication authentication = new CustomAuthToken(false);
         Assert.assertFalse(AuthenticationWrapper.isAuthenticated(authentication));
     }
 }

@@ -29,8 +29,7 @@
                         <param>cz.muni.fi.AuthenticationWrapper</param>
                     </targetClasses>
                     <targetTests>
-                        <param>cz.muni.fi.AuthenticationMutatorKilledTest</param>
-<!--                            <param>cz.muni.fi.AuthenticationMutatorSurvivedTest</param>-->
+                        <param>cz.muni.fi.AuthenticationMutatorSurvivedTest</param>
                     </targetTests>
                     <mutators>
                         <mutator>AUTH_TOKEN_IS_ALWAYS_AUTHENTICATED_MUTATOR</mutator>
